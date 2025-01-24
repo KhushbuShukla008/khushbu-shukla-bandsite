@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("/assets/font/NunitoSans-Regular.woff") format("woff"), url("/assets/font/Alternative_files/NunitoSans-Medium") format("woff2");
+  font-weight: 400;
+}/*# sourceMappingURL=bio.css.map */
