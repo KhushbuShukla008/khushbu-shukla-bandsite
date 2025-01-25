@@ -1,6 +1,20 @@
 @font-face {
     font-family: "Nunito Sans";
     src: url("/assets/font/NunitoSans-Regular.woff") format("woff"),
-         url("/assets/font/Alternative_files/NunitoSans-Medium") format("woff2");
+         url("/assets/font/alternative\ files/NunitoSans-Regular") format("woff2");
     font-weight: 400;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src: url("/assets/font/NunitoSans-Medium.woff") format("woff"),
+         url("/assets/font/alternative\ files/NunitoSans-Medium") format("woff2");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src: url("/assets/font/NunitoSans-Bold.woff") format("woff"),
+         url("/assets/font/alternative\ files/NunitoSans-Bold") format("woff2");
+    font-weight: 700;
 }
