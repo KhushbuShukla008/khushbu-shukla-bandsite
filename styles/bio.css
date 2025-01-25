@@ -20,8 +20,24 @@
 body {
   margin: 0;
   font-family: "Nunito Sans";
-  padding-left: 16px;
-  padding-right: 16px;
+}
+@media (min-width: 320px) {
+  body {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+@media (min-width: 1280px) {
+  body {
+    padding-left: auto;
+    padding-right: auto;
+  }
 }
 
 .header {
@@ -29,7 +45,9 @@ body {
 }
 @media (min-width: 320px) {
   .header__title {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media (min-width: 768px) {
@@ -44,31 +62,56 @@ body {
     justify-content: flex-start;
   }
 }
-
-.nav {
+.header__title .header__image {
+  margin-top: 16px;
+  margin-left: 16px;
+}
+.header .nav {
   color: #E1E1E1;
 }
-.nav__list {
+.header .nav__list {
   margin: 0;
   padding: 0;
   display: flex;
   padding-top: 1rem;
 }
-.nav__item {
+@media (min-width: 320px) {
+  .header .nav__list {
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) {
+  .header .nav__list {
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 1280px) {
+  .header .nav__list {
+    justify-content: flex-end;
+  }
+}
+.header .nav__item {
   list-style-type: none;
   padding: 0;
   flex-grow: 1;
+  justify-content: center;
 }
-.nav__item__link {
+.header .nav__item__link {
   text-decoration: none;
   color: #E1E1E1;
 }
-.nav__item__link--active {
+.header .nav__item__link:link, .header .nav__item__link:visited {
+  color: #E1E1E1;
+}
+.header .nav__item__link:active {
+  color: white;
+}
+.header .nav__item__link--active {
   text-decoration: underline;
   font-weight: bold;
   color: #FFFFFF;
 }
-.nav__item__link:hover {
+.header .nav__item__link::hover {
   text-decoration: underline;
   font-weight: bold;
   color: #FFFFFF;

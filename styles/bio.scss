@@ -10,16 +10,35 @@
 body {
   margin: 0;
   font-family: "Nunito Sans";
+@include mobile{
   padding-left: 16px;
   padding-right: 16px;
+}
+@include tablet{
+  padding-left: 36px;
+  padding-right: 36px;
+}
+@include desktop{
+  padding-left: auto;
+  padding-right: auto;
+}
 }
 
 .header {
   background-color: $primary-color-1;
-
+  
   &__title {
+    
     @include mobile {
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include tablet {
+      display: flex;
+      justify-content: flex-start;
+      
     }
 
     @include tablet {
@@ -27,12 +46,12 @@ body {
       justify-content: flex-start;
     }
 
-    @include tablet {
-      display: flex;
-      justify-content: flex-start;
+    .header__image{
+      margin-top: 16px;
+      margin-left: 16px;
     }
   }
-}
+
 .nav {
   color: $secondary-color-2;
 
@@ -42,16 +61,34 @@ body {
     padding: 0;
     display: flex;
     padding-top: 1rem;
+    @include mobile {
+      justify-content: center; 
+    }
+
+    @include tablet {
+      justify-content: flex-end;
+    }
+
+    @include desktop {
+      justify-content: flex-end;
+    }
   }
 
   &__item {
     list-style-type: none;
     padding: 0;
     flex-grow: 1;
-
+    justify-content: center;
     &__link {
       text-decoration: none;
       color: $secondary-color-2;
+
+      &:link, &:visited {
+      color: $secondary-color-2;
+    }
+    &:active {
+      color: white;  
+    }
 
       &--active {
         text-decoration: underline;
@@ -59,7 +96,7 @@ body {
         color: $primary-color-3;
       }
 
-      &:hover {
+      &::hover {
         text-decoration: underline;
         font-weight: bold;
         color: $primary-color-3;
@@ -67,7 +104,7 @@ body {
     }
   }
 }
-
+}
 .hero-section {
   width: 100%;
 
