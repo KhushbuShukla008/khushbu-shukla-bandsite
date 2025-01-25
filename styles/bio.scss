@@ -1,6 +1,7 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 @use "./partials/typography";
+@use "./partials/global";
 
 * {
   box-sizing: border-box;
@@ -9,16 +10,34 @@
 body {
   margin: 0;
   font-family: "Nunito Sans";
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .header {
   background-color: $primary-color-1;
-  text-align: center;
-}
 
+  &__title {
+    @include mobile {
+      text-align: center;
+    }
+
+    @include tablet {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    @include tablet {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+}
 .nav {
+  color: $secondary-color-2;
+
   &__list {
-    color: $primary-color-3;
+
     margin: 0;
     padding: 0;
     display: flex;
@@ -29,24 +48,52 @@ body {
     list-style-type: none;
     padding: 0;
     flex-grow: 1;
+
+    &__link {
+      text-decoration: none;
+      color: $secondary-color-2;
+
+      &--active {
+        text-decoration: underline;
+        font-weight: bold;
+        color: $primary-color-3;
+      }
+
+      &:hover {
+        text-decoration: underline;
+        font-weight: bold;
+        color: $primary-color-3;
+      }
+    }
   }
 }
 
 .hero-section {
   width: 100%;
-  height: 100vh;
-  @include mobile{
+
+  @include mobile {
     height: 50vh;
   }
+
+  @include tablet {
+    height: 100vh;
+  }
+
+  @include desktop {
+    height: 100vh;
+  }
+
   background: url('../assets/images/hero-bio.jpg') no-repeat;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
   background-color: $secondary-color-1;
   justify-content: center;
   align-items: flex-start;
   display: flex;
   flex-direction: column;
   position: relative;
+  object-fit: contain;
 
   &::before {
     content: '';
@@ -66,25 +113,35 @@ body {
     z-index: 1;
     color: $primary-color-3;
     text-align: center;
+
     @include mobile {
       font-size: 24px;
       font-weight: 700;
       line-height: 32px;
+      padding-top: 24px;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
     }
-    @include tablet{
+
+    @include tablet {
       font-size: 60px;
       font-weight: 700;
       line-height: 68px;
+      padding-top: 48px;
+      padding-bottom: 36px;
+      margin-bottom: 36px;
     }
-    @include desktop{
+
+    @include desktop {
       font-size: 60px;
       font-weight: 700;
       line-height: 68px;
+      padding-top: 48px;
+      padding-bottom: 36px;
+      margin-bottom: 36px;
     }
   }
-
 }
-
 .about-section {
   &__image {
     width: 100%;
