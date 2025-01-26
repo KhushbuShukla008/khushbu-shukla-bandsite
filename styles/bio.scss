@@ -177,39 +177,89 @@ main{
     }
   }
   footer{
-    background-color: $secondary-color-1;
-    color: $primary-color-3;
+    background-color: $primary-color-1;
+    color: $secondary-color-2;
+    position: relative;
   }
 .footer-band{
+    @include tablet{
     display: flex;
     justify-content:flex-start;
-   
+  } 
 }
   .social-media{
     align-content: center;
+    @include tablet{
     margin-top: 4rem;
     margin-left: 1rem;
+    }
+    @include desktop{
+    margin-top: 3rem;
+    margin-left: 1rem;
+    }
     &__images{
         padding: 1rem;
         @include tablet{
            padding: 1.5rem; 
         }
-        @include desktop{
-            
-        }
+        
     }
   }
   .footer-about{
     display: block;
-    
+    &__contacts:first-child{
+        @include tablet{
+            padding-left: 0rem;
+        }
+        @include desktop{
+            padding-left: 0rem;
+        }
+    }
     @include tablet{
     display: flex;
-  }
+    justify-content: space-between;
+    margin-left: 2%;
+    margin-right: 20%;
+}
+@include desktop{
+    display: flex;
+        justify-content: space-between;
+        margin-left: 4%;
+        padding-right: 20%;
+        margin-top: -3%;
+}
+
   }
   .email-address{
     margin-top: 16px;
   }
-  .footer-copyright{
-    margin-top:-1rem;
-    padding-bottom: 2rem;
+  .footer__image{
+    padding: 1rem;
+    margin-top: 2rem;
+    @include tablet {
+        position: absolute;
+        top: 4rem; 
+        right: 2rem; 
+        width: 120px; 
+      }
+    
+      @include desktop {
+        position: absolute;
+        top: 5.5rem;
+        right: 5%;
+        width: 120px;
+      }
   }
+  .footer-copyright{
+    // margin-top:-1rem;
+    padding-bottom: 2rem;
+    @include tablet{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+    }
+    @include desktop{
+    padding: 3rem;
+    }
+  }
+  
