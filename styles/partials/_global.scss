@@ -1,0 +1,105 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito Sans";
+
+    @include mobile {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    @include tablet {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+
+    @include desktop {
+        padding-left: auto;
+        padding-right: auto;
+    }
+}
+
+h1{
+    @include mobile{
+        @include page-header-mobile;
+    }
+
+    @include tablet {
+        @include page-header-tablet-desktop;
+    }
+
+    @include desktop {
+        @include page-header-tablet-desktop;
+    }
+}
+h2{
+    @include mobile{
+        @include section-header-mobile;
+    }
+
+    @include tablet {
+        @include section-header-tablet-desktop;
+    }
+
+    @include desktop {
+        @include section-header-tablet-desktop;
+    }
+}
+h3{
+           @include mobile{
+            @include subheader-mobile;
+        }
+    
+        @include tablet {
+            @include subheader-tablet-desktop;
+        }
+    
+        @include desktop {
+            @include subheader-tablet-desktop;
+        }
+}
+h4{
+    @include mobile{
+     @include body-copy-mobile;
+ }
+
+ @include tablet {
+     @include body-copy-tablet-desktop;
+ }
+
+ @include desktop {
+     @include body-copy-tablet-desktop;
+ }
+}
+h5{
+    @include mobile{
+     @include footer-copy-mobile;
+ }
+
+ @include tablet {
+     @include footer-copy-tablet-desktop;
+ }
+
+ @include desktop {
+     @include footer-copy-tablet-desktop;
+ }
+}
+h6{
+    @include mobile{
+     @include labels-buttons-mobile;
+ }
+
+ @include tablet {
+     @include labels-buttons-tablet-desktop;
+ }
+
+ @include desktop {
+     @include labels-buttons-tablet-desktop;
+ }
+}

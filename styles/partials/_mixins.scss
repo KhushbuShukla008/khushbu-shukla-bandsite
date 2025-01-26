@@ -5,17 +5,128 @@
     @content;
   }
 }
-@mixin tablet {
-    @media (min-width: $tablet-breakpoint) {
-      @content;
-    }
-  }
-  
-  @mixin desktop {
-    @media (min-width: $desktop-breakpoint) {
-      @content;
-    }
-  }
 
-  
-  
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin page-header-mobile {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  margin-left: 2rem;
+  @content;
+}
+
+@mixin page-header-tablet-desktop {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 68px;
+  padding-top: 48px;
+  padding-bottom: 36px;
+  margin-bottom: 36px;
+  @content;
+}
+
+
+@mixin section-header-mobile {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  @content;
+}
+@mixin section-header-tablet-desktop  {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  padding-top: 48px;
+  padding-bottom: 36px;
+  margin-bottom: 36px;
+  @content;
+}
+@mixin subheader-mobile {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  @content;
+}
+@mixin subheader-tablet-desktop  {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  padding-top: 48px;
+  padding-bottom: 36px;
+  margin-bottom: 36px;
+  @content;
+}
+@mixin body-copy-mobile {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  @content;
+}
+@mixin body-copy-tablet-desktop  {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  padding-top: 48px;
+  padding-bottom: 36px;
+  margin-bottom: 36px;
+  @content;
+}
+@mixin footer-copy-mobile {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  @content;
+}
+@mixin footer-copy-tablet-desktop  {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  padding-top: 48px;
+  padding-bottom: 36px;
+  margin-bottom: 36px;
+  @content;
+}
+@mixin labels-buttons-mobile {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  @content;
+}
+@mixin labels-buttons-tablet-desktop  {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  padding-top: 48px;
+  padding-bottom: 36px;
+  margin-bottom: 36px;
+  @content;
+}

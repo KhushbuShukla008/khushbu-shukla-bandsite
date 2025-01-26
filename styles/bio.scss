@@ -3,29 +3,6 @@
 @use "./partials/typography";
 @use "./partials/global";
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: "Nunito Sans";
-
-    @include mobile {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    @include tablet {
-        padding-left: 36px;
-        padding-right: 36px;
-    }
-
-    @include desktop {
-        padding-left: auto;
-        padding-right: auto;
-    }
-}
 
 .header {
     background-color: $primary-color-1;
@@ -89,13 +66,12 @@ body {
     @include desktop {
         height: 100vh;
     }
-
     background-image: url(../assets/images/hero-bio.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
-    background-color: $secondary-color-1;
+    background-color: $primary-color-1;
     justify-content: center;
     align-items: flex-start;
     display: flex;
@@ -115,38 +91,10 @@ body {
     }
 
     &__title {
-        margin-top: 24px;
-        margin-bottom: 16px;
-        margin-left: 16px;
+      margin-left: 3rem;
         z-index: 1;
         color: $primary-color-3;
         text-align: center;
+ }
 
-        @include mobile {
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 32px;
-            padding-top: 24px;
-            padding-bottom: 16px;
-            margin-bottom: 16px;
-        }
-
-        @include tablet {
-            font-size: 60px;
-            font-weight: 700;
-            line-height: 68px;
-            padding-top: 48px;
-            padding-bottom: 36px;
-            margin-bottom: 36px;
-        }
-
-        @include desktop {
-            font-size: 60px;
-            font-weight: 700;
-            line-height: 68px;
-            padding-top: 48px;
-            padding-bottom: 36px;
-            margin-bottom: 36px;
-        }
-    }
 }
