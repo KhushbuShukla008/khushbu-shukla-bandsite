@@ -8,7 +8,8 @@
 body {
     margin: 0;
     font-family: "Nunito Sans";
-
+}
+main{
     @include mobile {
         padding-left: 16px;
         padding-right: 16px;
@@ -24,18 +25,17 @@ body {
         padding-right: auto;
     }
 }
-
 h1{
     @include mobile{
         @include page-header-mobile;
     }
 
     @include tablet {
-        @include page-header-tablet-desktop;
+        @include page-header-tablet;
     }
 
     @include desktop {
-        @include page-header-tablet-desktop;
+        @include page-header-desktop;
     }
 }
 h2{
@@ -44,11 +44,11 @@ h2{
     }
 
     @include tablet {
-        @include section-header-tablet-desktop;
+        @include section-header-tablet;
     }
 
     @include desktop {
-        @include section-header-tablet-desktop;
+        @include section-header-desktop;
     }
 }
 h3{
@@ -57,11 +57,11 @@ h3{
         }
     
         @include tablet {
-            @include subheader-tablet-desktop;
+            @include subheader-tablet;
         }
     
         @include desktop {
-            @include subheader-tablet-desktop;
+            @include subheader-desktop;
         }
 }
 h4{
@@ -70,36 +70,49 @@ h4{
  }
 
  @include tablet {
-     @include body-copy-tablet-desktop;
+     @include body-copy-tablet;
  }
 
  @include desktop {
-     @include body-copy-tablet-desktop;
+     @include body-copy-desktop;
  }
 }
 h5{
+    @include mobile{
+     @include footer-copybold-mobile;
+ }
+
+ @include tablet {
+     @include footer-copybold-tablet;
+ }
+
+ @include desktop {
+     @include footer-copybold-desktop;
+ }
+}
+h6{
     @include mobile{
      @include footer-copy-mobile;
  }
 
  @include tablet {
-     @include footer-copy-tablet-desktop;
+     @include footer-copy-tablet;
  }
 
  @include desktop {
-     @include footer-copy-tablet-desktop;
+     @include footer-copy-desktop;
  }
 }
-h6{
+h7{
     @include mobile{
      @include labels-buttons-mobile;
  }
 
  @include tablet {
-     @include labels-buttons-tablet-desktop;
+     @include labels-buttons-tablet;
  }
 
  @include desktop {
-     @include labels-buttons-tablet-desktop;
+     @include labels-buttons-desktop;
  }
 }

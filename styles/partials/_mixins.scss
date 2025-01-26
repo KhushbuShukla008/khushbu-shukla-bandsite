@@ -25,17 +25,28 @@
   padding-top: 24px;
   padding-bottom: 16px;
   margin-bottom: 16px;
-  margin-left: 2rem;
+  margin-left: 1rem;
   @content;
 }
 
-@mixin page-header-tablet-desktop {
+@mixin page-header-tablet {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 68px;
+  // padding-top: 48px;
+  // padding-bottom: 36px;
+  // margin-bottom: 36px;
+  margin-left: 2rem;
+  @content;
+}
+@mixin page-header-desktop {
   font-size: 60px;
   font-weight: 700;
   line-height: 68px;
   padding-top: 48px;
   padding-bottom: 36px;
   margin-bottom: 36px;
+  margin-left: 4rem;
   @content;
 }
 
@@ -44,72 +55,146 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
-  padding-top: 24px;
+  // padding-top: 24px;
   padding-bottom: 16px;
-  margin-bottom: 16px;
+  margin-left: 1rem;
   @content;
 }
-@mixin section-header-tablet-desktop  {
+@mixin section-header-tablet  {
   font-size: 36px;
   font-weight: 700;
   line-height: 44px;
-  padding-top: 48px;
+  // padding-top: 48px;
   padding-bottom: 36px;
-  margin-bottom: 36px;
+  // margin-left: 2rem;
   @content;
 }
+@mixin section-header-desktop  {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  // padding-top: 48px;
+  // padding-bottom: 36px;
+  margin-bottom: 36px;
+  // margin-left: 4rem;
+  @content;
+}
+
 @mixin subheader-mobile {
   font-size: 14px;
   font-weight: 500;
   line-height: 22px;
-  padding-top: 24px;
-  padding-bottom: 16px;
-  margin-bottom: 16px;
+  // padding-top: 16px;
+  // padding-bottom: 16px;
+  margin-left: 1rem;
   @content;
 }
-@mixin subheader-tablet-desktop  {
+@mixin subheader-tablet {
   font-size: 24px;
   font-weight: 500;
   line-height: 32px;
-  padding-top: 48px;
-  padding-bottom: 36px;
+  // padding-top: 36px;
+  // padding-bottom: 36px;
+  // margin-left: 2rem;
+  @content;
+}
+@mixin subheader-desktop  {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  // padding-top: 36px;
+  // padding-bottom: 36px;
   margin-bottom: 36px;
+  // margin-left: 4rem;
   @content;
 }
 @mixin body-copy-mobile {
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  margin-bottom: 16px;
+  // padding-top: 16px;
+  // padding-bottom: 16px;
+  margin-left: 1rem;
   @content;
 }
-@mixin body-copy-tablet-desktop  {
+@mixin body-copy-tablet  {
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  padding-top: 48px;
-  padding-bottom: 36px;
+  // padding-top: 36px;
+  // padding-bottom: 36px;
   margin-bottom: 36px;
+  // margin-left: 2rem;
+  @content;
+}
+@mixin body-copy-desktop  {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  // padding-top: 36px;
+  // padding-bottom: 36px;
+  margin-bottom: 36px;
+  // margin-left: 4rem;
+  @content;
+}
+@mixin footer-copybold-mobile {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  // padding-top: 16px;
+  // padding-bottom: 16px;
+  margin-left: 1rem;
+  @content;
+}
+@mixin footer-copybold-tablet  {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  // padding-top: 36px;
+  // padding-bottom: 36px;
+  // margin-bottom: 36px;
+  // margin-left: 2rem;
+  @content;
+}
+@mixin footer-copybold-desktop  {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  // padding-top: 36px;
+  // padding-bottom: 36px;
+  // margin-bottom: 36px;
+  // margin-left: 4rem;
   @content;
 }
 @mixin footer-copy-mobile {
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  margin-bottom: 16px;
+  // padding-top: 16px;
+  // padding-bottom: 16px;
+  margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
   @content;
 }
-@mixin footer-copy-tablet-desktop  {
+@mixin footer-copy-tablet  {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  padding-top: 48px;
-  padding-bottom: 36px;
-  margin-bottom: 36px;
+  // padding-top: 36px;
+  // padding-bottom: 36px;
+  // margin-bottom: 36px;
+  // margin-left: 2rem;
+  @content;
+}
+@mixin footer-copy-desktop  {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  // padding-top: 36px;
+  // padding-bottom: 36px;
+  // margin-bottom: 36px;
+  // margin-left: 4rem;
   @content;
 }
 @mixin labels-buttons-mobile {
@@ -119,14 +204,26 @@
   padding-top: 16px;
   padding-bottom: 16px;
   margin-bottom: 16px;
+  margin-left: 1rem;
   @content;
 }
-@mixin labels-buttons-tablet-desktop  {
+@mixin labels-buttons-tablet  {
   font-size: 12px;
   font-weight: 700;
   line-height: 20px;
-  padding-top: 48px;
+  padding-top: 36px;
   padding-bottom: 36px;
   margin-bottom: 36px;
+  // margin-left: 2rem;
+  @content;
+}
+@mixin labels-buttons-desktop  {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  margin-bottom: 36px;
+  // margin-left: 4rem;
   @content;
 }
