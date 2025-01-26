@@ -1,0 +1,152 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+@use "./partials/typography";
+@use "./partials/global";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito Sans";
+
+    @include mobile {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    @include tablet {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+
+    @include desktop {
+        padding-left: auto;
+        padding-right: auto;
+    }
+}
+
+.header {
+    background-color: $primary-color-1;
+    
+}
+
+.nav {
+    background-color: $primary-color-1;
+    color: $secondary-color-2;
+    &__list {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 2rem;
+        margin: 0;
+        
+        &__item {
+            list-style: none;
+            flex-grow: 1;
+
+            &:first-child{
+                margin-right: auto;
+            }
+        }
+        
+        &__link{
+            padding: 0 30px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: $primary-color-2;
+            
+            &:hover{
+                text-decoration: underline;
+                font-weight: bold;
+                color: $primary-color-3; 
+            }
+            
+            &--active {
+                font-weight: bold;
+                color: $primary-color-3;
+               }
+        }
+    }
+}
+
+
+.hero-section {
+    width: 100%;
+
+    @include mobile {
+        height: 50vh;
+    }
+
+    @include tablet {
+        height: 100vh;
+    }
+
+    @include desktop {
+        height: 100vh;
+    }
+
+    background-image: url(../assets/images/hero-bio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    background-color: $secondary-color-1;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    object-fit: contain;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    }
+
+    &__title {
+        margin-top: 24px;
+        margin-bottom: 16px;
+        margin-left: 16px;
+        z-index: 1;
+        color: $primary-color-3;
+        text-align: center;
+
+        @include mobile {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px;
+            padding-top: 24px;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+        }
+
+        @include tablet {
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 68px;
+            padding-top: 48px;
+            padding-bottom: 36px;
+            margin-bottom: 36px;
+        }
+
+        @include desktop {
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 68px;
+            padding-top: 48px;
+            padding-bottom: 36px;
+            margin-bottom: 36px;
+        }
+    }
+}
