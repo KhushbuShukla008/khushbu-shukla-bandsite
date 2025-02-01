@@ -366,7 +366,7 @@ h4{
      @include body-copy-desktop;
  }
 }
-h5{
+.footer-copy-bold{
     @include mobile{
      @include footer-copybold-mobile;
  }
@@ -379,7 +379,7 @@ h5{
      @include footer-copybold-desktop;
  }
 }
-h6{
+.footer-copy{
     @include mobile{
      @include footer-copy-mobile;
  }
@@ -392,7 +392,7 @@ h6{
      @include footer-copy-desktop;
  }
 }
-h7{
+.label-button{
     @include mobile{
      @include labels-buttons-mobile;
  }

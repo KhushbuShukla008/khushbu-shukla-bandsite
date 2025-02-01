@@ -110,3 +110,103 @@ main {
     }
 }
 
+.comments-section {
+    background-color: $primary-color-3;
+    // width: 100%;
+    height: 100vh;
+}
+
+.comment-form {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
+    // justify-content: center;
+    // justify-self: center;
+    &__fields{
+        margin-top: -1rem;
+    }
+    &__picture {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        margin: 1.5rem 0 1rem 1rem;
+        @include tablet {
+            width: 48px;
+            height: 48px;
+            margin: 1.5rem 0 1rem 5rem;
+        }
+    }
+}
+
+.container {
+    position: relative; 
+    width: 100%; 
+    height: auto;
+    max-width: 95%; 
+    // margin: 0 auto;
+}
+label {
+    display: block;
+    padding-top: 16px;
+    color: $secondary-color-2;
+    @include labels-buttons-mobile;
+
+    @include tablet{
+        @include labels-buttons-tablet;
+    }
+
+    @include desktop{
+        @include labels-buttons-desktop;
+    }
+
+}
+
+input {
+    width: 90%;
+    height: 36px;
+    padding: 12px;
+    border: 1px solid $secondary-color-2;
+    border-radius: 4px;
+    margin-top: 5px;
+    @include tablet {
+        width: 95%;
+        height: 48px;
+        padding: 16px;
+    }
+}
+#comment{
+    height: 6rem;
+}
+input:focus {
+    border: 1px solid $primary-color-1;
+    outline: none;
+}
+
+input.error {
+    border: 1px solid #D22D2D;
+}
+button {
+    background-color: $primary-color-1;
+    color: $primary-color-3;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 4px;
+    padding-top: 0;
+    width: 90%;
+    position: absolute;
+    left: 0rem;
+    top: 14rem;
+    @include labels-buttons-mobile;
+
+    @include tablet{
+    width: 150px;
+    padding: 0 32px;
+    left: auto;  
+    right: 0rem;
+    }
+}
+button:hover {
+    background-color: $secondary-color-1;
+}

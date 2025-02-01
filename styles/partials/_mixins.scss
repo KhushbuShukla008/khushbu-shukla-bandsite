@@ -201,19 +201,19 @@
   font-size: 10px;
   font-weight: 700;
   line-height: 20px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  margin-bottom: 16px;
-  margin-left: 1rem;
+  // padding-top: 16px;
+  // padding-bottom: 16px;
+  // margin-bottom: 16px;
+  // margin-left: 1rem;
   @content;
 }
 @mixin labels-buttons-tablet  {
   font-size: 12px;
   font-weight: 700;
   line-height: 20px;
-  padding-top: 36px;
-  padding-bottom: 36px;
-  margin-bottom: 36px;
+  // padding-top: 36px;
+  // padding-bottom: 36px;
+  // margin-bottom: 36px;
   // margin-left: 2rem;
   @content;
 }
@@ -221,9 +221,9 @@
   font-size: 12px;
   font-weight: 700;
   line-height: 20px;
-  padding-top: 36px;
-  padding-bottom: 36px;
-  margin-bottom: 36px;
+  // padding-top: 36px;
+  // padding-bottom: 36px;
+  // margin-bottom: 36px;
   // margin-left: 4rem;
   @content;
 }
