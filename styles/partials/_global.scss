@@ -1,14 +1,200 @@
 @use "./variables" as *;
 @use "./mixins" as *;
+@use "./typography";
 
 * {
     box-sizing: border-box;
 }
+.header {
+    background-color: $primary-color-1;
+}
 
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.header__title {
+    margin-bottom: 20px;
+
+}
+
+.header__image {
+    width: 120px;
+    margin-left: 2rem;
+
+    @include desktop {
+        margin-left: 8rem;
+    }
+
+    color: $primary-color-3;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0rem;
+    width: 100%;
+}
+
+.nav__item {
+    margin: 0 10px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: $secondary-color-2;
+    position: relative;
+}
+
+
+.nav__link--active:hover {
+    color: white;
+    // text-decoration: underline;
+}
+
+.nav__link--active::after {
+    content: '';
+    position: absolute;
+    height: 6px;
+    background-color: $primary-color-3;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0;
+    left: -230%;
+    right: -200%;
+    bottom: -1.5rem;
+
+    @include tablet {
+        left: 1rem;
+        right: 0rem;
+        bottom: -2rem;
+    }
+
+}
+
+.nav__link--active:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav__item:last-child {
+    color: $secondary-color-2;
+    cursor: default;
+}
+
+@include tablet {
+    .nav {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .header__title {
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+
+    .nav__list {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: auto;
+        margin-bottom: 0rem;
+    }
+
+    .nav__item {
+        margin: 0 20px;
+    }
+}
+
+@include desktop {
+    .nav {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .header__title {
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+
+    .nav__list {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: auto;
+        margin-bottom: -0.6rem;
+    }
+
+    .nav__item {
+        margin: 0 20px;
+    }
+}
+
+.hero-section {
+    width: 100%;
+
+    @include mobile {
+        height: 50vh;
+    }
+
+    @include tablet {
+        height: 80vh;
+    }
+
+    @include desktop {
+        height: 80vh;
+    }
+
+    background-image: url(../assets/images/hero-bio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    background-color: $primary-color-1;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    object-fit: contain;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    }
+
+    &__title {
+        margin-left: 3rem;
+
+        @include desktop {
+            margin-left: 8rem;
+        }
+
+        z-index: 1;
+        color: $primary-color-3;
+        text-align: center;
+    }
+}
 body {
     margin: 0;
     font-family: "Nunito Sans";
 }
+
+
 main{
     @include mobile {
         padding-left: 16px;
@@ -23,6 +209,109 @@ main{
     @include desktop {
         padding-left: auto;
         padding-right: auto;
+    }
+}
+footer {
+    background-color: $primary-color-1;
+    color: $secondary-color-2;
+    position: relative;
+}
+
+.footer-band {
+    @include tablet {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+.social-media {
+    align-content: center;
+
+    @include tablet {
+        margin-top: 4rem;
+        margin-left: 1rem;
+    }
+
+    @include desktop {
+        margin-top: 3rem;
+        margin-left: 1rem;
+    }
+
+    &__images {
+        padding: 1rem;
+
+        @include tablet {
+            padding: 1.5rem;
+        }
+
+    }
+}
+
+.footer-about {
+    display: block;
+
+    &__contacts:first-child {
+        @include tablet {
+            padding-left: 0rem;
+        }
+
+        @include desktop {
+            padding-left: 0rem;
+        }
+    }
+
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 2%;
+        margin-right: 20%;
+    }
+
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 4%;
+        padding-right: 20%;
+        margin-top: -3%;
+    }
+
+}
+
+.email-address {
+    margin-top: 16px;
+}
+
+.footer__image {
+    padding: 1rem;
+    margin-top: 2rem;
+
+    @include tablet {
+        position: absolute;
+        top: 4rem;
+        right: 2rem;
+        width: 120px;
+    }
+
+    @include desktop {
+        position: absolute;
+        top: 5.5rem;
+        right: 5%;
+        width: 120px;
+    }
+}
+
+.footer-copyright {
+    // margin-top:-1rem;
+    padding-bottom: 2rem;
+
+    @include tablet {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        padding-left: 1rem;
+    }
+
+    @include desktop {
+        padding: 3rem;
     }
 }
 h1{
