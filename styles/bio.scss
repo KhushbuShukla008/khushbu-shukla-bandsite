@@ -113,7 +113,8 @@ main {
 .comments-section {
     background-color: $primary-color-3;
     // width: 100%;
-    height: 100vh;
+    height: 100%;
+    margin-bottom: 3rem;
 }
 
 .comment-form {
@@ -204,9 +205,61 @@ button {
     width: 150px;
     padding: 0 32px;
     left: auto;  
-    right: 0rem;
+    right: 5%;
     }
 }
 button:hover {
     background-color: $secondary-color-1;
+}
+#comments-container{
+    margin-top: 6rem;
+    height: 100%;
+    width: 80%;
+    @include tablet{
+        width: 90%;
+    }
+    justify-self: center;
+}
+
+.comment {
+    padding: 10px;
+    margin-bottom: -1rem;
+    
+    .comment__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+
+        .comment__avatar {
+            width: 36px;
+        height: 36px;
+        @include tablet{
+            width: 48px;
+        height: 48px;
+        }
+            border-radius: 50%; 
+            background-color: $secondary-color-2; 
+            margin-right: 10px; 
+        }
+
+        .comment__info {
+            display: flex;
+            // flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            h3 {
+                margin: 1rem; 
+                font-weight: bold;
+            }
+
+            h4 {
+                color: $primary-color-2;
+            }
+        }
+    }
+
+    .comment__divider {
+        border: 1px solid $secondary-color-2;
+        margin-top: 10px;
+    }
 }

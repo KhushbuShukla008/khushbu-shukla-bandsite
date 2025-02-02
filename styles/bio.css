@@ -614,7 +614,8 @@ main {
 
 .comments-section {
   background-color: #FFFFFF;
-  height: 100vh;
+  height: 100%;
+  margin-bottom: 3rem;
 }
 
 .comment-form {
@@ -720,10 +721,61 @@ button {
     width: 150px;
     padding: 0 32px;
     left: auto;
-    right: 0rem;
+    right: 5%;
   }
 }
 
 button:hover {
   background-color: #000000;
+}
+
+#comments-container {
+  margin-top: 6rem;
+  height: 100%;
+  width: 80%;
+  justify-self: center;
+}
+@media (min-width: 768px) {
+  #comments-container {
+    width: 90%;
+  }
+}
+
+.comment {
+  padding: 10px;
+  margin-bottom: -1rem;
+}
+.comment .comment__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.comment .comment__header .comment__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #E1E1E1;
+  margin-right: 10px;
+}
+@media (min-width: 768px) {
+  .comment .comment__header .comment__avatar {
+    width: 48px;
+    height: 48px;
+  }
+}
+.comment .comment__header .comment__info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.comment .comment__header .comment__info h3 {
+  margin: 1rem;
+  font-weight: bold;
+}
+.comment .comment__header .comment__info h4 {
+  color: #AFAFAF;
+}
+.comment .comment__divider {
+  border: 1px solid #E1E1E1;
+  margin-top: 10px;
 }/*# sourceMappingURL=bio.css.map */
