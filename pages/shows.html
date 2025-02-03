@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bandsite-Shows</title>
     <link rel="stylesheet" href="../styles/shows.css">
-    <script defer href="../scripts/build-shows-page.js"></script>
+
 </head>
 
 <body>
@@ -14,28 +14,36 @@
         <nav class="nav">
             <div class="nav__logo">
                 <a class="header__title" href="../index.html">
-                    <img class="header__image" src="../assets/logo/Logo-bandsite.svg" alt="logo">
+                    <img class="header__image" src="..//assets/logo/Logo-bandsite.svg" alt="logo">
                 </a>
             </div>
             <ul class="nav__list">
                 <li class="nav__item">
                     <a class="nav__link nav__link--active" href="../index.html">
-                        <h3>Biography</h3>
+                        <h3 class="nav__title">Biography</h3>
                     </a>
                 </li>
-                <li class="nav__item nav__link--active" href="./shows.html">
-                    <h3>Shows</h3>
+                <li class="nav__item">
+                    <a class="nav__link nav__link--active" href="./shows.html">
+                        <h3 class="nav__title">Shows</h3>
+                    </a>
                 </li>
             </ul>
         </nav>
         <section class="hero-section">
-            <h1 class="hero-section__title">The Bees Knees</h1>
+            <h3 class="hero-section__title">Beautiful Beasts Album</h3>
+            <h1 class="hero-section__title">Stripes of Yellow x For The Stings</h1>
+            <div class="soundcloud-embed">
+                <iframe title="music" class="music"  allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1626065838&amp;buying=false&&download=false&&show_artwork=true">
+                </iframe>
+            </div>
         </section>
     </header>
     <main>
-
+        <h1>SHOWS</h1>
+        <div id="shows-container"></div>
     </main>
-
+    <script src="../scripts/build-shows-page.js"></script>
 
     <footer>
         <section class="footer-band">
@@ -81,4 +89,5 @@
         </section>
     </footer>
 </body>
+
 </html>

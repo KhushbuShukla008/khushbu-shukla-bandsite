@@ -28,9 +28,9 @@ function displayComments() {
     commentsContainer.appendChild(divider);
   
     comments.forEach((comment) => {
-      const commentElement = document.createElement("div");
-      commentElement.className = "comment";
-      commentElement.innerHTML = `
+      const commentEl = document.createElement("div");
+      commentEl.className = "comment";
+      commentEl.innerHTML = `
         <div class="comment__header">
           <div class="comment__avatar"></div> 
           <div class="comment__info">
@@ -41,9 +41,28 @@ function displayComments() {
         <h4>${comment.comment}</h4>
         <hr class="comment__divider">
       `;
-      commentsContainer.appendChild(commentElement);
+      commentsContainer.appendChild(commentEl);
     });
   }
   
+  function commentSubmit(e) {
+    e.preventDefault(); 
+    const nameAdded = document.getElementById("name");
+    const commentAdded = document.getElementById("comment");
   
+    const newComment = {
+      name: nameAdded.value,
+      comment: commentAdded.value,
+      date: new Date(),
+    };
+  
+    comments.unshift(newComment);
+  
+    nameAdded.value = "";
+    commentAdded.value = "";
+        displayComments();
+  }
   document.addEventListener("DOMContentLoaded", displayComments);
+
+  const commentForm = document.querySelector(".comment-form__fields");
+   commentForm.addEventListener("submit", commentSubmit);
