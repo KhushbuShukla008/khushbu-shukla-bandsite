@@ -62,6 +62,18 @@
             margin-left: 8rem;
         } 
     }
+   
+}
+
+iframe {
+    margin-top: 20px;
+    height: 15rem;
+width: 85%;
+margin-top: 3rem;
+@include tablet{
+    width: 70%;
+    height: 14rem;
+}
 }
 
 .shows-section {
