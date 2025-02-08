@@ -512,17 +512,18 @@ nav h3 {
 }
 .hero-section::before {
   content: "";
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 0;
+  z-index: 1;
 }
 .hero-section__title {
   margin-left: 3rem;
   margin-top: 0rem;
-  z-index: 1;
+  z-index: 2;
   color: #FFFFFF;
 }
 @media (min-width: 1280px) {
@@ -534,7 +535,7 @@ nav h3 {
   margin-top: 20px;
   border-radius: 10px;
   margin-left: 3rem;
-  height: 200px;
+  height: 14rem;
   width: 100%;
 }
 @media (min-width: 1280px) {
@@ -543,15 +544,118 @@ nav h3 {
   }
 }
 
+@media (min-width: 320px) {
+  .ticket__heading {
+    margin-left: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .ticket__heading {
+    margin-left: 1rem;
+  }
+}
+
+#hidden {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+@media (min-width: 768px) {
+  #hidden {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3rem;
+    width: 70%;
+  }
+}
+@media (min-width: 1280px) {
+  #hidden {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: -3rem;
+    width: 100%;
+  }
+}
+
 .item__one,
 .item__two,
-.item__three {
+.item__three,
+.item__four {
   text-transform: uppercase;
   color: #AFAFAF;
-  text-transform: uppercase;
-  font-size: 10px;
-  line-height: 20px;
   font-weight: 700;
+}
+
+.show__detail {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .show__detail {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.show__details {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding: 1rem;
+  margin: 1rem;
+  width: 90%;
+}
+@media (min-width: 768px) {
+  .show__details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1280px) {
+  .show__details {
+    justify-content: space-around;
+  }
+}
+
+.item__two {
+  padding-left: 50px;
+}
+@media (min-width: 320px) {
+  .item__two {
+    padding-left: 87px;
+  }
+}
+@media (min-width: 768px) {
+  .item__two {
+    padding-left: 145px;
+  }
+}
+@media (min-width: 1280px) {
+  .item__two {
+    padding-left: 92px;
+  }
+}
+.item__three {
+  padding-left: 0rem;
+}
+@media (min-width: 320px) {
+  .item__three {
+    padding-left: 40px;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  .item__three {
+    padding-left: 96px;
+  }
+}
+@media (min-width: 1280px) {
+  .item__three {
+    padding-left: 42px;
+  }
 }
 
 .music {
@@ -567,103 +671,73 @@ nav h3 {
   }
 }
 
-.shows-section {
-  padding: 20px;
-}
-.shows-section .ticket__hidden {
-  display: none;
-  margin: 3rem 0 0 3rem;
-  gap: 120px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-@media (min-width: 768px) {
-  .shows-section .ticket__hidden {
-    display: flex;
-  }
-}
-.shows-section h3 {
-  margin-top: 1.5rem;
+#show-container {
   margin-left: 0rem;
 }
+@media (min-width: 1280px) {
+  #show-container {
+    margin-left: 20rem;
+  }
+}
+
+#showtimes {
+  gap: 16px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#showtimes .show-list {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  width: 90%;
+}
 @media (min-width: 768px) {
-  .shows-section h3 {
-    margin-top: 0rem;
+  #showtimes .show-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 @media (min-width: 1280px) {
-  .shows-section h3 {
-    margin-top: 1.5rem;
+  #showtimes .show-list {
+    justify-content: space-around;
   }
 }
-.shows-section .ticket__section {
-  display: flex;
-  flex-direction: column;
+
+.show__date {
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
-.shows-section .ticket__section .show {
-  background-color: #FFFFFF;
-  padding: 20px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
+
+.show__place {
+  margin-bottom: 1rem;
 }
-@media (min-width: 768px) {
-  .shows-section .ticket__section .show {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr auto;
-    align-items: center;
-    gap: 6px;
-  }
-}
-.shows-section .ticket__section .show:hover {
-  background-color: #FAFAFA;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.shows-section .ticket__section .show.selected {
-  background-color: #E1E1E1;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.shows-section .ticket__section .show__details {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .shows-section .ticket__section .show__details {
-    display: contents;
-  }
-}
-.shows-section .ticket__section .show__detail {
-  margin-bottom: 5px;
-}
-@media (min-width: 768px) {
-  .shows-section .ticket__section .show__detail {
-    margin-bottom: 0;
-    margin-right: 6px;
-  }
-}
-.shows-section .ticket__section .show__label {
-  color: #AFAFAF;
-  margin: 0;
-}
-.shows-section .ticket__section .show__date {
-  font-weight: bold;
-}
-.shows-section .ticket__section .show__divider {
+
+.show__divider {
   border: 1px solid #E1E1E1;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
   width: 100%;
 }
-@media (min-width: 768px) {
-  .shows-section .ticket__section .show__divider {
-    grid-column: span 4;
+@media (min-width: 1280px) {
+  .show__divider {
+    margin-left: 2rem;
+    width: 90%;
   }
 }
-.shows-section .ticket__section .show__button {
+
+.show__label {
+  margin-bottom: 1rem;
+  color: #AFAFAF;
+}
+@media (min-width: 768px) {
+  .show__label {
+    display: none;
+  }
+}
+
+.show__btn {
   background-color: #323232;
   color: #FFFFFF;
   border: none;
@@ -671,37 +745,25 @@ nav h3 {
   cursor: pointer;
   border-radius: 4px;
   padding-top: 0;
-  width: 100%;
+  width: 105%;
   left: 0rem;
   top: 14rem;
+  margin-bottom: 2rem;
   font-size: 10px;
   font-weight: 700;
   line-height: 20px;
 }
-.shows-section .ticket__section .show__button::hover {
+.show__btn::hover {
   background-color: #000000;
 }
 @media (min-width: 768px) {
-  .shows-section .ticket__section .show__button {
+  .show__btn {
     margin-top: 16px;
     width: 150px;
     padding: 0 32px;
     justify-self: end;
   }
 }
-.shows-section .ticket__section .show__button:hover {
+.show__btn:hover {
   background-color: #000000;
-}
-
-@media (min-width: 768px) {
-  .show__header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr auto;
-    gap: 20px;
-    align-items: center;
-  }
-  .show__header div {
-    font-weight: bold;
-    text-align: center;
-  }
 }/*# sourceMappingURL=shows.css.map */
