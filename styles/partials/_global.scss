@@ -4,7 +4,11 @@
 
 * {
     box-sizing: border-box;
-}
+    font-family:"NunitoSans" , sans-serif;
+    font-weight: 400;
+    margin:0 0;
+    padding:0 0;
+ }
 .header {
     background-color: $primary-color-1;
 }
@@ -30,7 +34,15 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
-
+    height: 100%;
+    padding: 1.5rem;
+    @include tablet{
+    padding: 2rem;
+    }
+    @include desktop{
+        padding: 0.5rem;
+    }
+   
     .nav__list {
         display: flex;
         justify-content: space-around;
@@ -69,7 +81,7 @@
                         transform: scaleX(0);
                         transform-origin: center;
                         // transition: transform 0;
-                        left: -21vw;
+                        left: -22.5vw;
                         width: 50vw;
                         bottom: -1.5rem;
                         
@@ -141,7 +153,8 @@
 
 body {
     margin: 0;
-    font-family: "Nunito Sans";
+    font-family: "NunitoSans", sans-serif;
+    font-weight: 400;
 }
 
 
@@ -176,14 +189,16 @@ footer {
 
 .social-media {
     align-content: center;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
 
     @include tablet {
-        margin-top: 4rem;
+        margin-top: 2rem;
         margin-left: 1rem;
     }
 
     @include desktop {
-        margin-top: 3rem;
+        margin-top: 1rem;
         margin-left: 1rem;
     }
 
@@ -237,14 +252,14 @@ footer {
 
     @include tablet {
         position: absolute;
-        top: 4rem;
+        top: 1rem;
         right: 2rem;
         width: 120px;
     }
 
     @include desktop {
         position: absolute;
-        top: 5.5rem;
+        top: 2.5rem;
         right: 5%;
         width: 120px;
     }
@@ -293,6 +308,7 @@ h2{
 h3{
            @include mobile{
             @include subheader-mobile;
+            // color: $primary-color-3;
         }
     
         @include tablet {

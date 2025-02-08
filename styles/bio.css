@@ -1,20 +1,24 @@
 @font-face {
   font-family: "Nunito Sans";
-  src: url("/assets/font/NunitoSans-Regular.woff") format("woff"), url("/assets/font/alternative files/NunitoSans-Regular") format("woff2");
+  src: url(../../assets/font/NunitoSans-Regular.woff);
   font-weight: 400;
 }
 @font-face {
   font-family: "Nunito Sans";
-  src: url("/assets/font/NunitoSans-Medium.woff") format("woff"), url("/assets/font/alternative files/NunitoSans-Medium") format("woff2");
+  src: url(../../assets/font/NunitoSans-Medium.woff);
   font-weight: 500;
 }
 @font-face {
   font-family: "Nunito Sans";
-  src: url("/assets/font/NunitoSans-Bold.woff") format("woff"), url("/assets/font/alternative files/NunitoSans-Bold") format("woff2");
-  font-weight: bold 700;
+  src: url(../../assets/font/NunitoSans-Bold.woff);
+  font-weight: 700;
 }
 * {
   box-sizing: border-box;
+  font-family: "NunitoSans", sans-serif;
+  font-weight: 400;
+  margin: 0 0;
+  padding: 0 0;
 }
 
 .header {
@@ -41,6 +45,18 @@
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  height: 100%;
+  padding: 1.5rem;
+}
+@media (min-width: 768px) {
+  .nav {
+    padding: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .nav {
+    padding: 0.5rem;
+  }
 }
 .nav .nav__list {
   display: flex;
@@ -75,7 +91,7 @@
   background-color: #FFFFFF;
   transform: scaleX(0);
   transform-origin: center;
-  left: -21vw;
+  left: -22.5vw;
   width: 50vw;
   bottom: -1.5rem;
 }
@@ -137,7 +153,8 @@
 
 body {
   margin: 0;
-  font-family: "Nunito Sans";
+  font-family: "NunitoSans", sans-serif;
+  font-weight: 400;
 }
 
 @media (min-width: 320px) {
@@ -174,16 +191,18 @@ footer {
 
 .social-media {
   align-content: center;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .social-media {
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-left: 1rem;
   }
 }
 @media (min-width: 1280px) {
   .social-media {
-    margin-top: 3rem;
+    margin-top: 1rem;
     margin-left: 1rem;
   }
 }
@@ -238,7 +257,7 @@ footer {
 @media (min-width: 768px) {
   .footer__image {
     position: absolute;
-    top: 4rem;
+    top: 1rem;
     right: 2rem;
     width: 120px;
   }
@@ -246,7 +265,7 @@ footer {
 @media (min-width: 1280px) {
   .footer__image {
     position: absolute;
-    top: 5.5rem;
+    top: 2.5rem;
     right: 5%;
     width: 120px;
   }
@@ -380,6 +399,8 @@ footer {
     font-weight: 700;
     line-height: 18px;
     margin-left: 1rem;
+    margin-bottom: 12px;
+    margin-top: 12px;
   }
 }
 @media (min-width: 768px) {
@@ -403,7 +424,6 @@ footer {
     font-weight: 400;
     line-height: 18px;
     margin-left: 1rem;
-    margin-top: 0;
     margin-bottom: 0;
   }
 }
@@ -446,6 +466,21 @@ footer {
 
 main {
   background-color: #FFFFFF;
+}
+
+nav h3 {
+  margin-top: 1.5rem;
+  margin-left: 0rem;
+}
+@media (min-width: 768px) {
+  nav h3 {
+    margin-top: 0rem;
+  }
+}
+@media (min-width: 1280px) {
+  nav h3 {
+    margin-top: 1.5rem;
+  }
 }
 
 .hero-section {

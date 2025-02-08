@@ -1,12 +1,25 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
-@use "./partials/typography";
+@use "../styles/partials/typography" as *;
 @use "./partials/global";
 
 
 
 main {
     background-color: $primary-color-3;
+}
+nav{
+    
+    h3 {
+        margin-top: 1.5rem;
+        margin-left: 0rem;
+        @include tablet{
+            margin-top: 0rem;
+        }
+        @include desktop{
+            margin-top: 1.5rem;
+        }
+    }   
 }
 .hero-section {
     width: 100%;

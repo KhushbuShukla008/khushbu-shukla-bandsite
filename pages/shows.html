@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bandsite-Shows</title>
     <link rel="stylesheet" href="../styles/shows.css">
-
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../scripts/build-shows-page.js" defer></script> -->
 </head>
 
 <body>
@@ -34,15 +35,29 @@
             <h3 class="hero-section__title">Beautiful Beasts Album</h3>
             <h1 class="hero-section__title">Stripes of Yellow x For The Stings</h1>
             <div class="soundcloud-embed">
-                <iframe title="music" class="music"  allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1626065838&amp;buying=false&&download=false&&show_artwork=true">
+                <iframe title="music" class="music" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1626065838&amp;buying=false&&download=false&&show_artwork=true">
                 </iframe>
             </div>
         </section>
     </header>
     <main>
-        <h1>SHOWS</h1>
-        <div id="shows-container"></div>
+        <section class="ticket">
+            <div class="ticket__title">
+                <h2 class="ticket__heading">Shows</h2>
+            </div>
+            <div class="hidden__section" id="show-container">
+                <div class="ticket__hidden" id="hidden">
+                    <div class="item__one"> Date </div>
+                    <div class="item__two"> Venue </div>
+                    <div class="item__three"> Location </div>
+                </div>
+                <div class=" ticket__section" id="showtimes">
+                </div>
+            </div>
+        </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../scripts/build-shows-page.js"></script>
 
     <footer>

@@ -73,6 +73,7 @@
   font-size: 36px;
   font-weight: 700;
   line-height: 44px;
+  
   // padding-top: 48px;
   // padding-bottom: 36px;
   margin-bottom: 36px;
@@ -144,6 +145,8 @@
   // padding-top: 16px;
   // padding-bottom: 16px;
   margin-left: 1rem;
+  margin-bottom: 12px;
+  margin-top: 12px;
   @content;
 }
 @mixin footer-copybold-tablet  {
@@ -173,7 +176,7 @@
   // padding-top: 16px;
   // padding-bottom: 16px;
   margin-left: 1rem;
-  margin-top: 0;
+  // margin-top: 0;
   margin-bottom: 0;
   @content;
 }
