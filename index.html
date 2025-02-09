@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bandsite</title>
     <link rel="stylesheet" href="./styles/bio.css">
-    <!-- <script href="./scripts/index-page.js" defer></script> -->
+    <script src="./scripts/band-site-api.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -96,9 +97,9 @@
                 <img class="comment-form__picture" src="./assets/images/Mohan-muruge.jpg" alt="User Avatar">
             </div>
             <div class="container">
-            <form class="comment-form__fields">
+            <form id="comment-form__container">
                 <label for="name">NAME</label>
-                <input type="text" id="name" placeholder="Enter your name">
+                <input type="text" id="username" placeholder="Enter your name">
                 
                 <label for="comment">COMMENT</label>
                 <input id="comment" type="text" placeholder="Add a new comment">
@@ -107,6 +108,8 @@
             </form></div>
         </div>
         <div id="comments-container"></div>
+        <!-- <script src="./scripts/band-site-api.js"></script>  -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
     </section>
     <footer>
         <section class="footer-band">
@@ -151,6 +154,6 @@
             <p class="footer-copyright footer-copy">Copyright The Bees Knees © 2023 All Rights Reserved</p>
         </section>
     </footer>
-    <script src="./scripts/index-page.js"></script>
+   
 </body>
 </html>

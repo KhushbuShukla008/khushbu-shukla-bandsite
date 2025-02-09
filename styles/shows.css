@@ -508,6 +508,8 @@ nav h3 {
 @media (min-width: 1280px) {
   .hero-section {
     height: 80vh;
+    display: flex;
+    flex-direction: row;
   }
 }
 .hero-section::before {
@@ -519,6 +521,11 @@ nav h3 {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
+}
+@media (min-width: 1280px) {
+  .hero-section__description {
+    margin-top: 10rem;
+  }
 }
 .hero-section__title {
   margin-left: 3rem;
@@ -541,6 +548,7 @@ nav h3 {
 @media (min-width: 1280px) {
   .hero-section .soundcloud-embed {
     margin-left: 8rem;
+    margin-top: 10rem;
   }
 }
 
