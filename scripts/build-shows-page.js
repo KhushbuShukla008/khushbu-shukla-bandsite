@@ -88,7 +88,19 @@ function displayShows(shows) {
         showsContainer.appendChild(showDiv);
         showsContainer.appendChild(divider);
 
+        showDiv.addEventListener("click", () => {
+            
+            showDiv.classList.toggle("active");
+
+            const allShows = document.querySelectorAll(".show-list");
+            allShows.forEach(otherShow => {
+                if (otherShow !== showDiv) {
+                    otherShow.classList.remove("active");
+                }
+            });
+        });
     });
+        
 }
 
 fetchShowData();

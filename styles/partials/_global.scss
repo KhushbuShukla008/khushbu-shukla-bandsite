@@ -80,7 +80,6 @@
                         background-color: $primary-color-3;
                         transform: scaleX(0);
                         transform-origin: center;
-                        // transition: transform 0;
                         left: -22.5vw;
                         width: 50vw;
                         bottom: -1.5rem;
@@ -266,7 +265,6 @@ footer {
 }
 
 .footer-copyright {
-    // margin-top:-1rem;
     padding-bottom: 2rem;
 
     @include tablet {
@@ -305,10 +303,9 @@ h2{
         @include section-header-desktop;
     }
 }
-h3{
+h3, span{
            @include mobile{
             @include subheader-mobile;
-            // color: $primary-color-3;
         }
     
         @include tablet {

@@ -36,6 +36,9 @@ async function getCommentsAndRender() {
             const commentEl = createCommentComponent(comment);
             list.prepend(commentEl);
         });
+        const finalDivider = document.createElement("hr");
+        finalDivider.classList.add("comment__divider", "last-divider");
+        list.appendChild(finalDivider);
     } catch (e) {
         console.error(e);
     }
@@ -61,13 +64,13 @@ function createCommentComponent({ name, comment, timestamp }) {
     const info = document.createElement("div");
     info.classList.add("comment__info");
 
-    const h3 = document.createElement("h3");
-    h3.innerText = name;
+    const span = document.createElement("span");
+    span.innerText = name;
 
     const h4 = document.createElement("h4");
     h4.innerText = date.toLocaleDateString();
 
-    info.appendChild(h3);
+    info.appendChild(span);
     info.appendChild(h4);
 
     header.appendChild(avatar);

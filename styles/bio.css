@@ -345,7 +345,7 @@ footer {
 }
 
 @media (min-width: 320px) {
-  h3 {
+  h3, span {
     font-size: 14px;
     font-weight: 500;
     line-height: 22px;
@@ -353,14 +353,14 @@ footer {
   }
 }
 @media (min-width: 768px) {
-  h3 {
+  h3, span {
     font-size: 24px;
     font-weight: 500;
     line-height: 32px;
   }
 }
 @media (min-width: 1280px) {
-  h3 {
+  h3, span {
     font-size: 24px;
     font-weight: 500;
     line-height: 32px;
@@ -654,6 +654,22 @@ nav h3 {
   align-items: flex-start;
   gap: 15px;
   margin-bottom: 30px;
+  width: 86%;
+  margin-left: 2rem;
+  justify-self: center;
+}
+@media (min-width: 768px) {
+  .comment-form {
+    width: 100%;
+    margin-left: -1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comment-form {
+    width: 50%;
+    margin-left: 0rem;
+    justify-self: center;
+  }
 }
 .comment-form__fields {
   margin-top: -1rem;
@@ -742,14 +758,14 @@ button {
   width: 90%;
   position: absolute;
   left: 0rem;
-  top: 14rem;
+  top: 16rem;
   font-size: 10px;
   font-weight: 700;
   line-height: 20px;
 }
 @media (min-width: 768px) {
   button {
-    top: 15rem;
+    top: 16rem;
     width: 150px;
     padding: 0 32px;
     left: auto;
@@ -772,10 +788,28 @@ button:hover {
     width: 90%;
   }
 }
+@media (min-width: 1280px) {
+  #comments-container {
+    width: 44%;
+    margin-left: 3rem;
+  }
+}
+
+.band-description-1 {
+  margin-bottom: 2rem;
+}
 
 .comment {
   padding: 10px;
   margin-bottom: -1rem;
+}
+.comment h4 {
+  margin-left: 4rem;
+}
+@media (min-width: 768px) {
+  .comment h4 {
+    margin-left: 4.5rem;
+  }
 }
 .comment .comment__header {
   display: flex;
@@ -785,6 +819,7 @@ button:hover {
 .comment .comment__header .comment__avatar {
   width: 36px;
   height: 36px;
+  margin-top: 1rem;
   border-radius: 50%;
   background-color: #E1E1E1;
   margin-right: 10px;
@@ -800,14 +835,33 @@ button:hover {
   justify-content: space-between;
   width: 100%;
 }
-.comment .comment__header .comment__info h3 {
+.comment .comment__header .comment__info span {
   margin: 1rem;
   font-weight: bold;
 }
 .comment .comment__header .comment__info h4 {
   color: #AFAFAF;
+  margin-top: 1rem;
 }
 .comment .comment__divider {
   border: 1px solid #E1E1E1;
-  margin-top: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .comment .comment__divider {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+}
+
+#comments-container > .last-divider {
+  margin-top: 2rem;
+  margin-bottom: -1rem;
+}
+@media (min-width: 768px) {
+  #comments-container > .last-divider {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
 }/*# sourceMappingURL=bio.css.map */

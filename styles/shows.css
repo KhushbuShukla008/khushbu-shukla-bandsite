@@ -345,7 +345,7 @@ footer {
 }
 
 @media (min-width: 320px) {
-  h3 {
+  h3, span {
     font-size: 14px;
     font-weight: 500;
     line-height: 22px;
@@ -353,14 +353,14 @@ footer {
   }
 }
 @media (min-width: 768px) {
-  h3 {
+  h3, span {
     font-size: 24px;
     font-weight: 500;
     line-height: 32px;
   }
 }
 @media (min-width: 1280px) {
-  h3 {
+  h3, span {
     font-size: 24px;
     font-weight: 500;
     line-height: 32px;
@@ -499,6 +499,7 @@ nav h3 {
   position: relative;
   -o-object-fit: contain;
      object-fit: contain;
+  z-index: 0;
 }
 @media (min-width: 768px) {
   .hero-section {
@@ -544,6 +545,7 @@ nav h3 {
   margin-left: 3rem;
   height: 14rem;
   width: 100%;
+  z-index: 2;
 }
 @media (min-width: 1280px) {
   .hero-section .soundcloud-embed {
@@ -555,11 +557,14 @@ nav h3 {
 @media (min-width: 320px) {
   .ticket__heading {
     margin-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: -1rem;
   }
 }
 @media (min-width: 768px) {
   .ticket__heading {
     margin-left: 1rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -682,6 +687,11 @@ nav h3 {
 #show-container {
   margin-left: 0rem;
 }
+@media (min-width: 768px) {
+  #show-container {
+    margin-left: -1rem;
+  }
+}
 @media (min-width: 1280px) {
   #show-container {
     margin-left: 20rem;
@@ -774,4 +784,14 @@ nav h3 {
 }
 .show__btn:hover {
   background-color: #000000;
+}
+
+.show-list {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.show-list:hover {
+  background-color: #FAFAFA;
+  transform: scale(1.02);
+  cursor: pointer;
 }/*# sourceMappingURL=shows.css.map */

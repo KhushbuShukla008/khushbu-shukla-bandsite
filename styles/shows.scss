@@ -38,6 +38,7 @@ nav {
     flex-direction: column;
     position: relative;
     object-fit: contain;
+    z-index: 0;
     @include tablet {
         height: 80vh;
     }
@@ -83,7 +84,7 @@ nav {
         margin-left: 3rem;
         height: 14rem;
         width: 100%;
-
+        z-index: 2;
         @include desktop {
             margin-left: 8rem;
             margin-top: 10rem;
@@ -94,9 +95,12 @@ nav {
 .ticket__heading{
 @include mobile{
     margin-left: 2rem;
+    margin-top: 2rem;
+  margin-bottom: -1rem;
 }
 @include tablet{
     margin-left: 1rem;
+    margin-bottom: 1rem;
 }
 }
 #hidden {
@@ -206,6 +210,9 @@ width: 90%;
 
 #show-container {
     margin-left: 0rem;
+    @include tablet{
+        margin-left: -1rem;
+    }
 
     @include desktop {
         margin-left: 20rem;
@@ -301,5 +308,15 @@ color: $primary-color-2;
     &:hover {
         background-color: $secondary-color-1;
     }
+}
+
+.show-list {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.show-list:hover {
+    background-color:$secondary-color-3;  
+    transform: scale(1.02);  
+    cursor: pointer;  
 }
 
